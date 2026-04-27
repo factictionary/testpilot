@@ -1,0 +1,871 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Test Pilot Pro - Affordable closed testing services for Android developers. Get 12 verified testers for just ₹299. Meet Google Play requirements in 14 days.">
+    <meta name="keywords" content="app testing, android testing, google play, closed testing, beta testing, app development">
+    <meta name="author" content="Test Pilot Pro">
+    <meta property="og:title" content="Test Pilot Pro - Professional App Testing">
+    <meta property="og:description" content="Affordable closed testing services for Android developers. 12 testers for ₹299.">
+    <meta property="og:image" content="https://www.testpilotpro.in/og-image.png">
+    <meta property="og:url" content="https://www.testpilotpro.in">
+    <title>Test Pilot Pro - Affordable App Testing for Android Developers</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        :root {
+            --primary: #2196F3;
+            --secondary: #1976D2;
+            --accent: #4CAF50;
+            --warning: #FF9800;
+            --error: #F44336;
+            --text-dark: #333;
+            --text-light: #666;
+            --bg-light: #f5f5f5;
+            --bg-white: #ffffff;
+            --shadow: 0 2px 10px rgba(0,0,0,0.1);
+            --shadow-lg: 0 10px 30px rgba(0,0,0,0.2);
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+            line-height: 1.6;
+            color: var(--text-dark);
+            background-color: var(--bg-light);
+        }
+
+        /* Navigation */
+        nav {
+            background-color: var(--bg-white);
+            box-shadow: var(--shadow);
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+
+        .nav-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            height: 70px;
+        }
+
+        .logo {
+            font-size: 1.5em;
+            font-weight: bold;
+            color: var(--primary);
+            text-decoration: none;
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 30px;
+            list-style: none;
+        }
+
+        .nav-links a {
+            color: var(--text-dark);
+            text-decoration: none;
+            transition: color 0.3s;
+        }
+
+        .nav-links a:hover {
+            color: var(--primary);
+        }
+
+        .cta-button {
+            background-color: var(--primary);
+            color: white;
+            padding: 10px 20px;
+            border-radius: 5px;
+            text-decoration: none;
+            transition: background-color 0.3s;
+        }
+
+        .cta-button:hover {
+            background-color: var(--secondary);
+        }
+
+        /* Hero Section */
+        .hero {
+            background: linear-gradient(135deg, var(--primary) 0%, var(--secondary) 100%);
+            color: white;
+            padding: 100px 20px;
+            text-align: center;
+        }
+
+        .hero-container {
+            max-width: 1000px;
+            margin: 0 auto;
+        }
+
+        .hero h1 {
+            font-size: 3.5em;
+            margin-bottom: 20px;
+            line-height: 1.2;
+        }
+
+        .hero p {
+            font-size: 1.3em;
+            margin-bottom: 30px;
+            opacity: 0.95;
+        }
+
+        .hero-buttons {
+            display: flex;
+            gap: 20px;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+
+        .btn {
+            padding: 15px 40px;
+            font-size: 1.1em;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: all 0.3s;
+            text-decoration: none;
+            display: inline-block;
+        }
+
+        .btn-primary {
+            background-color: var(--accent);
+            color: white;
+        }
+
+        .btn-primary:hover {
+            background-color: #45a049;
+            transform: translateY(-2px);
+            box-shadow: var(--shadow-lg);
+        }
+
+        .btn-secondary {
+            background-color: white;
+            color: var(--primary);
+            border: 2px solid white;
+        }
+
+        .btn-secondary:hover {
+            background-color: transparent;
+            transform: translateY(-2px);
+        }
+
+        /* Container */
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        /* Section */
+        section {
+            padding: 80px 20px;
+        }
+
+        section h2 {
+            font-size: 2.5em;
+            margin-bottom: 50px;
+            text-align: center;
+            color: var(--primary);
+        }
+
+        /* Features Grid */
+        .features-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 30px;
+            margin-bottom: 50px;
+        }
+
+        .feature-card {
+            background-color: var(--bg-white);
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: var(--shadow);
+            transition: all 0.3s;
+            text-align: center;
+        }
+
+        .feature-card:hover {
+            transform: translateY(-10px);
+            box-shadow: var(--shadow-lg);
+        }
+
+        .feature-icon {
+            font-size: 3em;
+            margin-bottom: 15px;
+        }
+
+        .feature-card h3 {
+            font-size: 1.3em;
+            margin-bottom: 15px;
+            color: var(--primary);
+        }
+
+        .feature-card p {
+            color: var(--text-light);
+            line-height: 1.8;
+        }
+
+        /* Pricing Section */
+        .pricing-section {
+            background-color: var(--bg-white);
+        }
+
+        .pricing-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+            margin-bottom: 50px;
+        }
+
+        .pricing-card {
+            background-color: var(--bg-light);
+            padding: 40px;
+            border-radius: 10px;
+            border: 2px solid transparent;
+            transition: all 0.3s;
+            text-align: center;
+        }
+
+        .pricing-card.popular {
+            border-color: var(--primary);
+            background-color: var(--bg-white);
+            transform: scale(1.05);
+            box-shadow: var(--shadow-lg);
+        }
+
+        .pricing-card h3 {
+            font-size: 1.5em;
+            margin-bottom: 10px;
+            color: var(--primary);
+        }
+
+        .price {
+            font-size: 2.5em;
+            font-weight: bold;
+            color: var(--accent);
+            margin: 20px 0;
+        }
+
+        .price-period {
+            color: var(--text-light);
+            font-size: 0.9em;
+        }
+
+        .features-list {
+            list-style: none;
+            margin: 30px 0;
+            text-align: left;
+        }
+
+        .features-list li {
+            padding: 10px 0;
+            border-bottom: 1px solid #eee;
+            color: var(--text-light);
+        }
+
+        .features-list li:before {
+            content: "✓ ";
+            color: var(--accent);
+            font-weight: bold;
+            margin-right: 10px;
+        }
+
+        /* How It Works */
+        .steps {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 30px;
+        }
+
+        .step {
+            background-color: var(--bg-white);
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: var(--shadow);
+            position: relative;
+        }
+
+        .step-number {
+            position: absolute;
+            top: -15px;
+            left: 30px;
+            background-color: var(--primary);
+            color: white;
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.5em;
+            font-weight: bold;
+        }
+
+        .step h3 {
+            margin-top: 20px;
+            margin-bottom: 15px;
+            color: var(--primary);
+        }
+
+        /* Stats Section */
+        .stats {
+            background: linear-gradient(135deg, var(--primary) 0%, var(--secondary) 100%);
+            color: white;
+            padding: 60px 20px;
+        }
+
+        .stats-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 40px;
+            text-align: center;
+        }
+
+        .stat {
+            font-size: 2.5em;
+            font-weight: bold;
+            margin-bottom: 10px;
+        }
+
+        .stat-label {
+            font-size: 1.1em;
+            opacity: 0.9;
+        }
+
+        /* Testimonials */
+        .testimonials-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+        }
+
+        .testimonial {
+            background-color: var(--bg-white);
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: var(--shadow);
+            border-left: 4px solid var(--primary);
+        }
+
+        .testimonial-text {
+            font-style: italic;
+            margin-bottom: 20px;
+            color: var(--text-light);
+            line-height: 1.8;
+        }
+
+        .testimonial-author {
+            font-weight: bold;
+            color: var(--primary);
+        }
+
+        .testimonial-role {
+            font-size: 0.9em;
+            color: var(--text-light);
+        }
+
+        /* FAQ */
+        .faq-item {
+            background-color: var(--bg-white);
+            padding: 20px;
+            margin-bottom: 15px;
+            border-radius: 5px;
+            box-shadow: var(--shadow);
+        }
+
+        .faq-question {
+            font-weight: bold;
+            color: var(--primary);
+            cursor: pointer;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .faq-answer {
+            margin-top: 15px;
+            color: var(--text-light);
+            display: none;
+        }
+
+        .faq-item.active .faq-answer {
+            display: block;
+        }
+
+        /* CTA Section */
+        .cta-section {
+            background: linear-gradient(135deg, var(--primary) 0%, var(--secondary) 100%);
+            color: white;
+            padding: 80px 20px;
+            text-align: center;
+        }
+
+        .cta-section h2 {
+            color: white;
+            margin-bottom: 30px;
+        }
+
+        .cta-section p {
+            font-size: 1.2em;
+            margin-bottom: 30px;
+            opacity: 0.95;
+        }
+
+        /* Footer */
+        footer {
+            background-color: #222;
+            color: white;
+            padding: 40px 20px;
+            text-align: center;
+        }
+
+        .footer-content {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 30px;
+            margin-bottom: 30px;
+            text-align: left;
+        }
+
+        .footer-section h4 {
+            margin-bottom: 15px;
+            color: var(--primary);
+        }
+
+        .footer-section ul {
+            list-style: none;
+        }
+
+        .footer-section ul li {
+            margin-bottom: 10px;
+        }
+
+        .footer-section a {
+            color: #ccc;
+            text-decoration: none;
+            transition: color 0.3s;
+        }
+
+        .footer-section a:hover {
+            color: var(--primary);
+        }
+
+        .footer-bottom {
+            border-top: 1px solid #444;
+            padding-top: 20px;
+            text-align: center;
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .hero h1 {
+                font-size: 2em;
+            }
+
+            .hero p {
+                font-size: 1em;
+            }
+
+            .nav-links {
+                display: none;
+            }
+
+            section h2 {
+                font-size: 1.8em;
+            }
+
+            .pricing-card.popular {
+                transform: scale(1);
+            }
+
+            .hero-buttons {
+                flex-direction: column;
+            }
+
+            .btn {
+                width: 100%;
+            }
+        }
+
+        /* Animations */
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .fade-in {
+            animation: fadeInUp 0.6s ease-out;
+        }
+    </style>
+</head>
+<body>
+    <!-- Navigation -->
+    <nav>
+        <div class="nav-container">
+            <a href="#" class="logo">🚀 Test Pilot Pro</a>
+            <ul class="nav-links">
+                <li><a href="#features">Features</a></li>
+                <li><a href="#pricing">Pricing</a></li>
+                <li><a href="#how-it-works">How It Works</a></li>
+                <li><a href="#faq">FAQ</a></li>
+                <li><a href="PRIVACY_POLICY.html" target="_blank">Privacy</a></li>
+            </ul>
+            <a href="#download" class="cta-button">Download App</a>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="hero-container fade-in">
+            <h1>Professional App Testing Made Affordable</h1>
+            <p>Get 12 verified testers for just ₹299. Meet Google Play requirements in 14 days.</p>
+            <div class="hero-buttons">
+                <a href="#download" class="btn btn-primary">Download Now</a>
+                <a href="#pricing" class="btn btn-secondary">View Pricing</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Features Section -->
+    <section id="features">
+        <div class="container">
+            <h2>Why Choose Test Pilot Pro?</h2>
+            <div class="features-grid">
+                <div class="feature-card fade-in">
+                    <div class="feature-icon">⚡</div>
+                    <h3>Lightning Fast</h3>
+                    <p>Get testers assigned within 24 hours. Start testing immediately and launch faster.</p>
+                </div>
+                <div class="feature-card fade-in">
+                    <div class="feature-icon">💰</div>
+                    <h3>Affordable</h3>
+                    <p>Just ₹299 for 12 testers. 75% cheaper than competitors. No hidden fees.</p>
+                </div>
+                <div class="feature-card fade-in">
+                    <div class="feature-icon">✅</div>
+                    <h3>Verified Testers</h3>
+                    <p>Real people, real testing. Automated verification of installation and usage.</p>
+                </div>
+                <div class="feature-card fade-in">
+                    <div class="feature-icon">📊</div>
+                    <h3>Real-time Dashboard</h3>
+                    <p>Track testing progress, tester assignments, and feedback in real-time.</p>
+                </div>
+                <div class="feature-card fade-in">
+                    <div class="feature-icon">📸</div>
+                    <h3>Detailed Feedback</h3>
+                    <p>Get comprehensive feedback with screenshots and testing reports.</p>
+                </div>
+                <div class="feature-card fade-in">
+                    <div class="feature-icon">🔒</div>
+                    <h3>Secure & Private</h3>
+                    <p>Tester identities are anonymous. Your app data is encrypted and secure.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Pricing Section -->
+    <section id="pricing" class="pricing-section">
+        <div class="container">
+            <h2>Simple, Transparent Pricing</h2>
+            <div class="pricing-grid">
+                <div class="pricing-card fade-in">
+                    <h3>Free Trial</h3>
+                    <div class="price">Free</div>
+                    <p class="price-period">Try before you buy</p>
+                    <ul class="features-list">
+                        <li>3 verified testers</li>
+                        <li>7 days testing</li>
+                        <li>Basic feedback</li>
+                        <li>Installation verification</li>
+                        <li>Limited to 1 app</li>
+                    </ul>
+                    <button class="btn btn-secondary" style="width: 100%;">Get Started</button>
+                </div>
+                <div class="pricing-card popular fade-in">
+                    <h3>Premium ⭐</h3>
+                    <div class="price">₹299</div>
+                    <p class="price-period">per app, one-time payment</p>
+                    <ul class="features-list">
+                        <li>12 verified testers</li>
+                        <li>14 days testing</li>
+                        <li>Detailed feedback</li>
+                        <li>Screenshots included</li>
+                        <li>Real-time dashboard</li>
+                        <li>Email support</li>
+                        <li>Meets Google Play requirements</li>
+                    </ul>
+                    <button class="btn btn-primary" style="width: 100%;">Choose Plan</button>
+                </div>
+            </div>
+            <p style="text-align: center; color: var(--text-light); margin-top: 30px;">
+                💡 <strong>Tip:</strong> Premium plan includes everything you need to meet Google Play's closed testing requirements.
+            </p>
+        </div>
+    </section>
+
+    <!-- How It Works -->
+    <section id="how-it-works">
+        <div class="container">
+            <h2>How It Works</h2>
+            <div class="steps">
+                <div class="step fade-in">
+                    <div class="step-number">1</div>
+                    <h3>Submit Your App</h3>
+                    <p>Enter your app details, package name, and description. Takes just 2 minutes.</p>
+                </div>
+                <div class="step fade-in">
+                    <div class="step-number">2</div>
+                    <h3>Choose a Plan</h3>
+                    <p>Select Free Trial or Premium. Pay securely via UPI or manual verification.</p>
+                </div>
+                <div class="step fade-in">
+                    <div class="step-number">3</div>
+                    <h3>Get Testers</h3>
+                    <p>Testers are assigned within 24 hours. Start testing immediately.</p>
+                </div>
+                <div class="step fade-in">
+                    <div class="step-number">4</div>
+                    <h3>Receive Feedback</h3>
+                    <p>Get detailed feedback with screenshots and testing reports in real-time.</p>
+                </div>
+                <div class="step fade-in">
+                    <div class="step-number">5</div>
+                    <h3>Launch Your App</h3>
+                    <p>Use the feedback to improve your app and launch on Google Play with confidence.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Stats Section -->
+    <section class="stats">
+        <div class="container">
+            <div class="stats-grid">
+                <div class="fade-in">
+                    <div class="stat">1000+</div>
+                    <div class="stat-label">Apps Tested</div>
+                </div>
+                <div class="fade-in">
+                    <div class="stat">5000+</div>
+                    <div class="stat-label">Active Testers</div>
+                </div>
+                <div class="fade-in">
+                    <div class="stat">24 hrs</div>
+                    <div class="stat-label">Avg Assignment Time</div>
+                </div>
+                <div class="fade-in">
+                    <div class="stat">4.8★</div>
+                    <div class="stat-label">User Rating</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials -->
+    <section>
+        <div class="container">
+            <h2>What Users Say</h2>
+            <div class="testimonials-grid">
+                <div class="testimonial fade-in">
+                    <div class="testimonial-text">
+                        "Test Pilot Pro helped me launch my app in just 2 weeks. The testers were professional and the feedback was invaluable!"
+                    </div>
+                    <div class="testimonial-author">Rahul Kumar</div>
+                    <div class="testimonial-role">App Developer</div>
+                </div>
+                <div class="testimonial fade-in">
+                    <div class="testimonial-text">
+                        "Finally, an affordable way to meet Google Play requirements. Highly recommended for indie developers!"
+                    </div>
+                    <div class="testimonial-author">Priya Sharma</div>
+                    <div class="testimonial-role">Startup Founder</div>
+                </div>
+                <div class="testimonial fade-in">
+                    <div class="testimonial-text">
+                        "The real-time dashboard is amazing. I could track testing progress and get feedback instantly. Worth every rupee!"
+                    </div>
+                    <div class="testimonial-author">Amit Patel</div>
+                    <div class="testimonial-role">Mobile Developer</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ Section -->
+    <section>
+        <div class="container">
+            <h2>Frequently Asked Questions</h2>
+            <div class="faq-item">
+                <div class="faq-question" onclick="this.parentElement.classList.toggle('active')">
+                    <span>What is Test Pilot Pro?</span>
+                    <span>+</span>
+                </div>
+                <div class="faq-answer">
+                    Test Pilot Pro is a platform that connects Android developers with verified testers to fulfill Google Play's closed testing requirements. We provide 12 testers for 14 days at just ₹299.
+                </div>
+            </div>
+
+            <div class="faq-item">
+                <div class="faq-question" onclick="this.parentElement.classList.toggle('active')">
+                    <span>How long does testing take?</span>
+                    <span>+</span>
+                </div>
+                <div class="faq-answer">
+                    Testers are typically assigned within 24 hours. The testing period is 14 days for the Premium plan and 7 days for the Free Trial.
+                </div>
+            </div>
+
+            <div class="faq-item">
+                <div class="faq-question" onclick="this.parentElement.classList.toggle('active')">
+                    <span>Is my app data secure?</span>
+                    <span>+</span>
+                </div>
+                <div class="faq-answer">
+                    Yes! We use enterprise-grade encryption, secure servers, and follow GDPR compliance. Your app data is never shared with third parties.
+                </div>
+            </div>
+
+            <div class="faq-item">
+                <div class="faq-question" onclick="this.parentElement.classList.toggle('active')">
+                    <span>Can I get a refund?</span>
+                    <span>+</span>
+                </div>
+                <div class="faq-answer">
+                    All payments are non-refundable once testing has commenced. However, if you have issues, contact our support team within 7 days of payment.
+                </div>
+            </div>
+
+            <div class="faq-item">
+                <div class="faq-question" onclick="this.parentElement.classList.toggle('active')">
+                    <span>What payment methods do you accept?</span>
+                    <span>+</span>
+                </div>
+                <div class="faq-answer">
+                    We accept UPI payments and manual payment verification via screenshot. Both methods are secure and processed quickly.
+                </div>
+            </div>
+
+            <div class="faq-item">
+                <div class="faq-question" onclick="this.parentElement.classList.toggle('active')">
+                    <span>Can I see tester identities?</span>
+                    <span>+</span>
+                </div>
+                <div class="faq-answer">
+                    No, tester identities are anonymous for privacy. Testers are identified as Tester1, Tester2, etc. You'll see their feedback and ratings.
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="cta-section" id="download">
+        <div class="container">
+            <h2>Ready to Launch Your App?</h2>
+            <p>Join 1000+ developers who trust Test Pilot Pro</p>
+            <div class="hero-buttons">
+                <a href="https://play.google.com/store/apps/details?id=in.factictionary.test_pilot_pro" class="btn btn-primary" target="_blank">
+                    📱 Download on Google Play
+                </a>
+                <a href="mailto:support@testpilotpro.in" class="btn btn-secondary">
+                    📧 Contact Support
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="footer-content">
+            <div class="footer-section">
+                <h4>Test Pilot Pro</h4>
+                <p>Professional app testing services for Android developers. Affordable, fast, and reliable.</p>
+            </div>
+            <div class="footer-section">
+                <h4>Quick Links</h4>
+                <ul>
+                    <li><a href="#features">Features</a></li>
+                    <li><a href="#pricing">Pricing</a></li>
+                    <li><a href="#how-it-works">How It Works</a></li>
+                    <li><a href="#faq">FAQ</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h4>Legal</h4>
+                <ul>
+                    <li><a href="PRIVACY_POLICY.html" target="_blank">Privacy Policy</a></li>
+                    <li><a href="TERMS_OF_SERVICE.html" target="_blank">Terms of Service</a></li>
+                    <li><a href="mailto:support@testpilotpro.in">Contact Us</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h4>Contact</h4>
+                <ul>
+                    <li>📧 <a href="mailto:support@testpilotpro.in">support@testpilotpro.in</a></li>
+                    <li>🌐 <a href="https://www.testpilotpro.in" target="_blank">www.testpilotpro.in</a></li>
+                    <li>📱 Available on Google Play</li>
+                </ul>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2026 Test Pilot Pro. All rights reserved.</p>
+            <p>Made with ❤️ for Android developers</p>
+        </div>
+    </footer>
+
+    <script>
+        // Smooth scrolling for anchor links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+                }
+            });
+        });
+
+        // Add fade-in animation on scroll
+        const observerOptions = {
+            threshold: 0.1,
+            rootMargin: '0px 0px -100px 0px'
+        };
+
+        const observer = new IntersectionObserver(function(entries) {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('fade-in');
+                    observer.unobserve(entry.target);
+                }
+            });
+        }, observerOptions);
+
+        document.querySelectorAll('.feature-card, .step, .testimonial, .pricing-card').forEach(el => {
+            observer.observe(el);
+        });
+    </script>
+</body>
+</html>
