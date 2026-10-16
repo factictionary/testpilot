@@ -1,871 +1,793 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Test Pilot Pro - Affordable closed testing services for Android developers. Get 12 verified testers for just ₹299. Meet Google Play requirements in 14 days.">
-    <meta name="keywords" content="app testing, android testing, google play, closed testing, beta testing, app development">
-    <meta name="author" content="Test Pilot Pro">
-    <meta property="og:title" content="Test Pilot Pro - Professional App Testing">
-    <meta property="og:description" content="Affordable closed testing services for Android developers. 12 testers for ₹299.">
-    <meta property="og:image" content="https://www.testpilotpro.in/og-image.png">
-    <meta property="og:url" content="https://www.testpilotpro.in">
-    <title>Test Pilot Pro - Affordable App Testing for Android Developers</title>
-    <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
-
-        :root {
-            --primary: #2196F3;
-            --secondary: #1976D2;
-            --accent: #4CAF50;
-            --warning: #FF9800;
-            --error: #F44336;
-            --text-dark: #333;
-            --text-light: #666;
-            --bg-light: #f5f5f5;
-            --bg-white: #ffffff;
-            --shadow: 0 2px 10px rgba(0,0,0,0.1);
-            --shadow-lg: 0 10px 30px rgba(0,0,0,0.2);
-        }
-
-        body {
-            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
-            line-height: 1.6;
-            color: var(--text-dark);
-            background-color: var(--bg-light);
-        }
-
-        /* Navigation */
-        nav {
-            background-color: var(--bg-white);
-            box-shadow: var(--shadow);
-            position: sticky;
-            top: 0;
-            z-index: 100;
-        }
-
-        .nav-container {
-            max-width: 1200px;
-            margin: 0 auto;
-            padding: 0 20px;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            height: 70px;
-        }
-
-        .logo {
-            font-size: 1.5em;
-            font-weight: bold;
-            color: var(--primary);
-            text-decoration: none;
-        }
-
-        .nav-links {
-            display: flex;
-            gap: 30px;
-            list-style: none;
-        }
-
-        .nav-links a {
-            color: var(--text-dark);
-            text-decoration: none;
-            transition: color 0.3s;
-        }
-
-        .nav-links a:hover {
-            color: var(--primary);
-        }
-
-        .cta-button {
-            background-color: var(--primary);
-            color: white;
-            padding: 10px 20px;
-            border-radius: 5px;
-            text-decoration: none;
-            transition: background-color 0.3s;
-        }
-
-        .cta-button:hover {
-            background-color: var(--secondary);
-        }
-
-        /* Hero Section */
-        .hero {
-            background: linear-gradient(135deg, var(--primary) 0%, var(--secondary) 100%);
-            color: white;
-            padding: 100px 20px;
-            text-align: center;
-        }
-
-        .hero-container {
-            max-width: 1000px;
-            margin: 0 auto;
-        }
-
-        .hero h1 {
-            font-size: 3.5em;
-            margin-bottom: 20px;
-            line-height: 1.2;
-        }
-
-        .hero p {
-            font-size: 1.3em;
-            margin-bottom: 30px;
-            opacity: 0.95;
-        }
-
-        .hero-buttons {
-            display: flex;
-            gap: 20px;
-            justify-content: center;
-            flex-wrap: wrap;
-        }
-
-        .btn {
-            padding: 15px 40px;
-            font-size: 1.1em;
-            border: none;
-            border-radius: 5px;
-            cursor: pointer;
-            transition: all 0.3s;
-            text-decoration: none;
-            display: inline-block;
-        }
-
-        .btn-primary {
-            background-color: var(--accent);
-            color: white;
-        }
-
-        .btn-primary:hover {
-            background-color: #45a049;
-            transform: translateY(-2px);
-            box-shadow: var(--shadow-lg);
-        }
-
-        .btn-secondary {
-            background-color: white;
-            color: var(--primary);
-            border: 2px solid white;
-        }
-
-        .btn-secondary:hover {
-            background-color: transparent;
-            transform: translateY(-2px);
-        }
-
-        /* Container */
-        .container {
-            max-width: 1200px;
-            margin: 0 auto;
-            padding: 0 20px;
-        }
-
-        /* Section */
-        section {
-            padding: 80px 20px;
-        }
-
-        section h2 {
-            font-size: 2.5em;
-            margin-bottom: 50px;
-            text-align: center;
-            color: var(--primary);
-        }
-
-        /* Features Grid */
-        .features-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-            gap: 30px;
-            margin-bottom: 50px;
-        }
-
-        .feature-card {
-            background-color: var(--bg-white);
-            padding: 30px;
-            border-radius: 10px;
-            box-shadow: var(--shadow);
-            transition: all 0.3s;
-            text-align: center;
-        }
-
-        .feature-card:hover {
-            transform: translateY(-10px);
-            box-shadow: var(--shadow-lg);
-        }
-
-        .feature-icon {
-            font-size: 3em;
-            margin-bottom: 15px;
-        }
-
-        .feature-card h3 {
-            font-size: 1.3em;
-            margin-bottom: 15px;
-            color: var(--primary);
-        }
-
-        .feature-card p {
-            color: var(--text-light);
-            line-height: 1.8;
-        }
-
-        /* Pricing Section */
-        .pricing-section {
-            background-color: var(--bg-white);
-        }
-
-        .pricing-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 30px;
-            margin-bottom: 50px;
-        }
-
-        .pricing-card {
-            background-color: var(--bg-light);
-            padding: 40px;
-            border-radius: 10px;
-            border: 2px solid transparent;
-            transition: all 0.3s;
-            text-align: center;
-        }
-
-        .pricing-card.popular {
-            border-color: var(--primary);
-            background-color: var(--bg-white);
-            transform: scale(1.05);
-            box-shadow: var(--shadow-lg);
-        }
-
-        .pricing-card h3 {
-            font-size: 1.5em;
-            margin-bottom: 10px;
-            color: var(--primary);
-        }
-
-        .price {
-            font-size: 2.5em;
-            font-weight: bold;
-            color: var(--accent);
-            margin: 20px 0;
-        }
-
-        .price-period {
-            color: var(--text-light);
-            font-size: 0.9em;
-        }
-
-        .features-list {
-            list-style: none;
-            margin: 30px 0;
-            text-align: left;
-        }
-
-        .features-list li {
-            padding: 10px 0;
-            border-bottom: 1px solid #eee;
-            color: var(--text-light);
-        }
-
-        .features-list li:before {
-            content: "✓ ";
-            color: var(--accent);
-            font-weight: bold;
-            margin-right: 10px;
-        }
-
-        /* How It Works */
-        .steps {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-            gap: 30px;
-        }
-
-        .step {
-            background-color: var(--bg-white);
-            padding: 30px;
-            border-radius: 10px;
-            box-shadow: var(--shadow);
-            position: relative;
-        }
-
-        .step-number {
-            position: absolute;
-            top: -15px;
-            left: 30px;
-            background-color: var(--primary);
-            color: white;
-            width: 50px;
-            height: 50px;
-            border-radius: 50%;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            font-size: 1.5em;
-            font-weight: bold;
-        }
-
-        .step h3 {
-            margin-top: 20px;
-            margin-bottom: 15px;
-            color: var(--primary);
-        }
-
-        /* Stats Section */
-        .stats {
-            background: linear-gradient(135deg, var(--primary) 0%, var(--secondary) 100%);
-            color: white;
-            padding: 60px 20px;
-        }
-
-        .stats-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-            gap: 40px;
-            text-align: center;
-        }
-
-        .stat {
-            font-size: 2.5em;
-            font-weight: bold;
-            margin-bottom: 10px;
-        }
-
-        .stat-label {
-            font-size: 1.1em;
-            opacity: 0.9;
-        }
-
-        /* Testimonials */
-        .testimonials-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 30px;
-        }
-
-        .testimonial {
-            background-color: var(--bg-white);
-            padding: 30px;
-            border-radius: 10px;
-            box-shadow: var(--shadow);
-            border-left: 4px solid var(--primary);
-        }
-
-        .testimonial-text {
-            font-style: italic;
-            margin-bottom: 20px;
-            color: var(--text-light);
-            line-height: 1.8;
-        }
-
-        .testimonial-author {
-            font-weight: bold;
-            color: var(--primary);
-        }
-
-        .testimonial-role {
-            font-size: 0.9em;
-            color: var(--text-light);
-        }
-
-        /* FAQ */
-        .faq-item {
-            background-color: var(--bg-white);
-            padding: 20px;
-            margin-bottom: 15px;
-            border-radius: 5px;
-            box-shadow: var(--shadow);
-        }
-
-        .faq-question {
-            font-weight: bold;
-            color: var(--primary);
-            cursor: pointer;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-        }
-
-        .faq-answer {
-            margin-top: 15px;
-            color: var(--text-light);
-            display: none;
-        }
-
-        .faq-item.active .faq-answer {
-            display: block;
-        }
-
-        /* CTA Section */
-        .cta-section {
-            background: linear-gradient(135deg, var(--primary) 0%, var(--secondary) 100%);
-            color: white;
-            padding: 80px 20px;
-            text-align: center;
-        }
-
-        .cta-section h2 {
-            color: white;
-            margin-bottom: 30px;
-        }
-
-        .cta-section p {
-            font-size: 1.2em;
-            margin-bottom: 30px;
-            opacity: 0.95;
-        }
-
-        /* Footer */
-        footer {
-            background-color: #222;
-            color: white;
-            padding: 40px 20px;
-            text-align: center;
-        }
-
-        .footer-content {
-            max-width: 1200px;
-            margin: 0 auto;
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-            gap: 30px;
-            margin-bottom: 30px;
-            text-align: left;
-        }
-
-        .footer-section h4 {
-            margin-bottom: 15px;
-            color: var(--primary);
-        }
-
-        .footer-section ul {
-            list-style: none;
-        }
-
-        .footer-section ul li {
-            margin-bottom: 10px;
-        }
-
-        .footer-section a {
-            color: #ccc;
-            text-decoration: none;
-            transition: color 0.3s;
-        }
-
-        .footer-section a:hover {
-            color: var(--primary);
-        }
-
-        .footer-bottom {
-            border-top: 1px solid #444;
-            padding-top: 20px;
-            text-align: center;
-        }
-
-        /* Responsive */
-        @media (max-width: 768px) {
-            .hero h1 {
-                font-size: 2em;
-            }
-
-            .hero p {
-                font-size: 1em;
-            }
-
-            .nav-links {
-                display: none;
-            }
-
-            section h2 {
-                font-size: 1.8em;
-            }
-
-            .pricing-card.popular {
-                transform: scale(1);
-            }
-
-            .hero-buttons {
-                flex-direction: column;
-            }
-
-            .btn {
-                width: 100%;
-            }
-        }
-
-        /* Animations */
-        @keyframes fadeInUp {
-            from {
-                opacity: 0;
-                transform: translateY(30px);
-            }
-            to {
-                opacity: 1;
-                transform: translateY(0);
-            }
-        }
-
-        .fade-in {
-            animation: fadeInUp 0.6s ease-out;
-        }
-    </style>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>DeviceLab12: Closed Testing — Real Android Devices for Google Play</title>
+<meta name="description" content="DeviceLab12 connects indie Android developers with a 12-device real-hardware fleet and a reciprocal dev-swap community to satisfy Google Play's 14-day closed testing requirement." />
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600;700;800&family=JetBrains+Mono:wght@500;600&display=swap" rel="stylesheet" />
+<style>
+  *, *::before, *::after { box-sizing: border-box; }
+  :root {
+    --bg: #fafafa;
+    --surface: #ffffff;
+    --ink: #0b1220;
+    --ink-soft: #3a4256;
+    --muted: #6b7280;
+    --line: #e9ecf2;
+    --line-soft: #f1f3f7;
+    --primary: #1d4ed8;
+    --primary-soft: #eef2ff;
+    --accent: #0ea5e9;
+    --good: #059669;
+    --warn: #d97706;
+    --radius: 18px;
+    --radius-lg: 24px;
+    --shadow: 0 2px 8px rgba(15, 23, 42, 0.04);
+    --shadow-md: 0 8px 28px -8px rgba(15, 23, 42, 0.12);
+    --shadow-lg: 0 24px 60px -20px rgba(15, 23, 42, 0.18);
+  }
+  html, body { margin: 0; padding: 0; }
+  body {
+    font-family: 'Outfit', system-ui, -apple-system, sans-serif;
+    background: var(--bg);
+    color: var(--ink);
+    line-height: 1.55;
+    -webkit-font-smoothing: antialiased;
+  }
+  a { color: inherit; text-decoration: none; }
+  img { max-width: 100%; display: block; }
+  .container { max-width: 1180px; margin: 0 auto; padding: 0 24px; }
+  .mono { font-family: 'JetBrains Mono', monospace; font-feature-settings: 'liga' 0; }
+  .eyebrow {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    font-size: 12px;
+    font-weight: 600;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    color: var(--primary);
+    background: var(--primary-soft);
+    padding: 6px 12px;
+    border-radius: 999px;
+  }
+
+  /* ───── Top bar ───── */
+  .topbar {
+    position: sticky; top: 0; z-index: 50;
+    background: rgba(250, 250, 250, 0.85);
+    backdrop-filter: saturate(180%) blur(10px);
+    border-bottom: 1px solid var(--line);
+  }
+  .topbar-inner {
+    display: flex; align-items: center; justify-content: space-between;
+    padding: 14px 0;
+  }
+  .brand { display: flex; align-items: center; gap: 10px; font-weight: 700; }
+  .brand img { width: 30px; height: 30px; border-radius: 8px; }
+  .brand-mark { font-size: 17px; letter-spacing: -0.01em; }
+  .topbar nav { display: flex; gap: 28px; font-size: 14px; color: var(--ink-soft); }
+  .topbar nav a { transition: color .2s; }
+  .topbar nav a:hover { color: var(--ink); }
+  .topbar .cta-install {
+    background: var(--ink);
+    color: white;
+    padding: 9px 16px;
+    border-radius: 10px;
+    font-weight: 600;
+    font-size: 14px;
+    display: inline-flex; align-items: center; gap: 6px;
+  }
+
+  /* ───── Hero ───── */
+  .hero { padding: 64px 0 32px; }
+  .hero-grid {
+    display: grid;
+    grid-template-columns: 1.05fr 0.95fr;
+    gap: 56px;
+    align-items: center;
+  }
+  .hero h1 {
+    font-size: clamp(34px, 4.6vw, 54px);
+    line-height: 1.06;
+    letter-spacing: -0.02em;
+    font-weight: 700;
+    margin: 18px 0 18px;
+  }
+  .hero h1 .accent {
+    background: linear-gradient(120deg, #1d4ed8 0%, #0ea5e9 100%);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+  .hero p.lede {
+    font-size: 18px; color: var(--ink-soft); max-width: 560px; margin: 0 0 24px;
+  }
+  .meta-row { display: flex; flex-wrap: wrap; gap: 14px; margin: 22px 0 28px; }
+  .meta-pill {
+    display: inline-flex; align-items: center; gap: 6px;
+    background: var(--surface);
+    border: 1px solid var(--line);
+    border-radius: 999px;
+    padding: 8px 14px;
+    font-size: 13px; color: var(--ink-soft);
+    box-shadow: var(--shadow);
+  }
+  .meta-pill strong { color: var(--ink); font-weight: 600; }
+  .cta-row { display: flex; gap: 12px; flex-wrap: wrap; }
+  .btn {
+    display: inline-flex; align-items: center; gap: 8px;
+    padding: 14px 22px; border-radius: 12px;
+    font-weight: 600; font-size: 15px;
+    border: 1px solid transparent; cursor: pointer;
+    transition: transform .15s ease, box-shadow .2s ease;
+  }
+  .btn-primary {
+    background: var(--ink); color: white;
+    box-shadow: 0 8px 24px -8px rgba(11, 18, 32, 0.5);
+  }
+  .btn-primary:hover { transform: translateY(-1px); }
+  .btn-ghost {
+    background: var(--surface); color: var(--ink);
+    border-color: var(--line);
+  }
+  .btn-ghost:hover { border-color: #c8d0e0; }
+
+  /* Feature card preview */
+  .hero-card {
+    position: relative;
+    background: linear-gradient(155deg, #0f172a 0%, #1e293b 50%, #1e1b4b 100%);
+    color: white;
+    border-radius: var(--radius-lg);
+    padding: 32px;
+    overflow: hidden;
+    box-shadow: var(--shadow-lg);
+  }
+  .hero-card::before {
+    content: ""; position: absolute; inset: 0;
+    background: radial-gradient(circle at 80% 20%, rgba(14, 165, 233, 0.25), transparent 50%);
+    pointer-events: none;
+  }
+  .hero-card-label {
+    display: inline-flex; align-items: center; gap: 6px;
+    font-size: 11px; font-weight: 600;
+    letter-spacing: 0.08em; text-transform: uppercase;
+    color: #93c5fd;
+    background: rgba(147, 197, 253, 0.1);
+    border: 1px solid rgba(147, 197, 253, 0.2);
+    padding: 5px 11px; border-radius: 999px;
+  }
+  .hero-card h2 { font-size: 24px; margin: 16px 0 8px; font-weight: 600; letter-spacing: -0.01em; }
+  .hero-card p { color: #cbd5e1; font-size: 15px; margin: 0 0 22px; }
+  .feature-mock {
+    display: grid; grid-template-columns: repeat(3, 1fr); gap: 10px;
+    background: rgba(255, 255, 255, 0.04);
+    border: 1px solid rgba(255, 255, 255, 0.06);
+    border-radius: 14px;
+    padding: 16px;
+  }
+  .fleet-summary { padding: 22px 16px; }
+  .fleet-stat {
+    text-align: center;
+    padding: 8px 4px;
+  }
+  .fleet-stat svg { margin: 0 auto 10px; }
+  .fleet-num {
+    font-size: 28px; font-weight: 700; letter-spacing: -0.02em;
+    color: #f1f5f9; line-height: 1;
+  }
+  .fleet-lbl {
+    font-size: 11px; font-weight: 500;
+    color: #94a3b8; margin-top: 6px;
+    letter-spacing: 0.02em;
+  }
+  .device-tile {
+    background: rgba(255, 255, 255, 0.04);
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    border-radius: 10px;
+    padding: 14px 12px;
+    text-align: center;
+  }
+  .device-tile svg { margin: 0 auto 8px; }
+  .device-tile .name { font-size: 12px; font-weight: 600; color: #f1f5f9; }
+  .device-tile .ver { font-size: 10px; color: #94a3b8; margin-top: 2px; }
+  .device-tile.active { background: rgba(14, 165, 233, 0.12); border-color: rgba(14, 165, 233, 0.35); }
+  .device-tile.active .name { color: #7dd3fc; }
+  .fleet-note {
+    font-size: 12px; color: #94a3b8; margin: 14px 0 0;
+    line-height: 1.5;
+  }
+
+  /* ───── Section base ───── */
+  section { padding: 72px 0; }
+  .section-head { text-align: center; max-width: 720px; margin: 0 auto 48px; }
+  .section-head h2 {
+    font-size: clamp(28px, 3.4vw, 40px);
+    line-height: 1.1; letter-spacing: -0.02em; font-weight: 700;
+    margin: 14px 0 14px;
+  }
+  .section-head p { font-size: 17px; color: var(--ink-soft); margin: 0; }
+
+  /* ───── Screenshot showcase ───── */
+  .screens-section { background: var(--surface); border-top: 1px solid var(--line); border-bottom: 1px solid var(--line); }
+  .screen-row {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 24px;
+    align-items: end;
+  }
+  .screen-card {
+    background: var(--surface);
+    border-radius: 22px;
+    overflow: hidden;
+    box-shadow: var(--shadow-md);
+    transition: transform .2s ease;
+  }
+  .screen-card:hover { transform: translateY(-4px); }
+  .screen-frame {
+    background: #0b1220;
+    padding: 14px 10px 10px;
+    border-radius: 22px 22px 0 0;
+  }
+  .screen-frame img { border-radius: 12px; aspect-ratio: 16/9; object-fit: cover; }
+  .screen-meta { padding: 14px 18px 18px; }
+  .screen-meta .num { font-size: 11px; font-weight: 600; color: var(--primary); letter-spacing: 0.1em; }
+  .screen-meta h4 { font-size: 15px; margin: 4px 0 0; font-weight: 600; letter-spacing: -0.01em; }
+
+  /* ───── Feature pillars ───── */
+  .pillars {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    gap: 18px;
+  }
+  .pillar {
+    background: var(--surface);
+    border: 1px solid var(--line);
+    border-radius: var(--radius);
+    padding: 24px 22px;
+    box-shadow: var(--shadow);
+    transition: transform .2s ease, box-shadow .2s ease;
+  }
+  .pillar:hover { transform: translateY(-2px); box-shadow: var(--shadow-md); }
+  .pillar-icon {
+    width: 44px; height: 44px;
+    border-radius: 12px;
+    background: var(--primary-soft);
+    color: var(--primary);
+    display: flex; align-items: center; justify-content: center;
+    margin-bottom: 16px;
+  }
+  .pillar h3 { font-size: 16px; font-weight: 600; margin: 0 0 8px; letter-spacing: -0.01em; }
+  .pillar p { font-size: 13.5px; color: var(--ink-soft); margin: 0; line-height: 1.55; }
+
+  /* ───── Why section ───── */
+  .why-section { background: var(--surface); border-top: 1px solid var(--line); }
+  .why-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 56px;
+    align-items: center;
+  }
+  .why-grid h2 {
+    font-size: 34px; line-height: 1.1; letter-spacing: -0.02em;
+    font-weight: 700; margin: 0 0 18px;
+  }
+  .why-grid p { font-size: 16px; color: var(--ink-soft); margin: 0 0 18px; }
+  .checklist { list-style: none; padding: 0; margin: 18px 0 0; }
+  .checklist li {
+    display: flex; align-items: flex-start; gap: 12px;
+    padding: 10px 0;
+    border-top: 1px dashed var(--line);
+    font-size: 15px; color: var(--ink-soft);
+  }
+  .checklist li:first-child { border-top: 0; }
+  .checklist li svg { flex-shrink: 0; color: var(--good); margin-top: 2px; }
+  .checklist li strong { color: var(--ink); font-weight: 600; }
+  .feature-graphic {
+    border-radius: var(--radius-lg);
+    overflow: hidden;
+    box-shadow: var(--shadow-lg);
+    background: linear-gradient(135deg, #0f172a, #1e1b4b);
+    aspect-ratio: 500/1024;
+    max-width: 380px;
+    margin: 0 auto;
+  }
+  .feature-graphic img { width: 100%; height: 100%; object-fit: cover; }
+
+  /* Blank mobile preview */
+  .phone-mock {
+    margin-top: 32px;
+    width: 200px;
+    aspect-ratio: 9/19;
+    background: #0b1220;
+    border-radius: 28px;
+    padding: 8px;
+    box-shadow: 0 20px 40px -12px rgba(15, 23, 42, 0.25), inset 0 0 0 1px rgba(255, 255, 255, 0.06);
+    position: relative;
+  }
+  .phone-mock::before {
+    content: "";
+    position: absolute;
+    top: 14px; left: 50%;
+    transform: translateX(-50%);
+    width: 48px; height: 14px;
+    background: #0b1220;
+    border-radius: 8px;
+    z-index: 2;
+  }
+  .phone-screen {
+    width: 100%; height: 100%;
+    background: #ffffff;
+    border-radius: 20px;
+    overflow: hidden;
+  }
+
+  /* ───── How it works ───── */
+  .steps {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 0;
+    position: relative;
+  }
+  .step {
+    text-align: left;
+    padding: 0 22px;
+    position: relative;
+  }
+  .step + .step::before {
+    content: ""; position: absolute; left: -1px; top: 32px;
+    width: calc(100% - 44px); height: 2px;
+    background: repeating-linear-gradient(90deg, var(--line) 0 6px, transparent 6px 12px);
+  }
+  .step-num {
+    width: 40px; height: 40px; border-radius: 50%;
+    background: var(--ink); color: white;
+    display: flex; align-items: center; justify-content: center;
+    font-weight: 700; font-size: 15px;
+    margin-bottom: 20px;
+  }
+  .step h3 { font-size: 17px; font-weight: 600; margin: 0 0 8px; letter-spacing: -0.01em; }
+  .step p { font-size: 14px; color: var(--ink-soft); margin: 0; line-height: 1.55; }
+
+  /* ───── Pricing ───── */
+  .pricing-section { background: var(--surface); border-top: 1px solid var(--line); }
+  .plans {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 24px;
+    max-width: 880px; margin: 0 auto;
+  }
+  .plan {
+    background: var(--bg);
+    border: 1px solid var(--line);
+    border-radius: var(--radius-lg);
+    padding: 36px 32px;
+    position: relative;
+  }
+  .plan.featured {
+    background: linear-gradient(155deg, #0f172a, #1e1b4b);
+    color: white;
+    border-color: transparent;
+    box-shadow: var(--shadow-lg);
+  }
+  .plan-tag {
+    position: absolute; top: -12px; right: 24px;
+    background: var(--accent);
+    color: white;
+    font-size: 11px; font-weight: 700;
+    letter-spacing: 0.08em; text-transform: uppercase;
+    padding: 5px 10px; border-radius: 6px;
+  }
+  .plan h3 { font-size: 18px; font-weight: 600; margin: 0 0 6px; letter-spacing: -0.01em; }
+  .plan .price { font-size: 44px; font-weight: 700; letter-spacing: -0.02em; margin: 16px 0 4px; }
+  .plan .price small { font-size: 16px; font-weight: 500; opacity: 0.7; }
+  .plan .price-period { font-size: 13px; color: var(--muted); margin: 0 0 20px; }
+  .plan.featured .price-period { color: #94a3b8; }
+  .plan ul { list-style: none; padding: 0; margin: 0 0 28px; }
+  .plan ul li {
+    display: flex; align-items: flex-start; gap: 10px;
+    padding: 9px 0; font-size: 14.5px;
+    border-top: 1px solid rgba(0, 0, 0, 0.05);
+  }
+  .plan.featured ul li { border-top-color: rgba(255, 255, 255, 0.08); color: #cbd5e1; }
+  .plan ul li:first-child { border-top: 0; }
+  .plan ul li svg { flex-shrink: 0; margin-top: 2px; color: var(--good); }
+  .plan.featured ul li svg { color: #34d399; }
+  .plan .btn { width: 100%; justify-content: center; }
+  .plan.featured .btn-primary { background: white; color: var(--ink); }
+  .plan.featured .btn-primary:hover { background: #f1f5f9; }
+
+  /* ───── Data safety / trust ───── */
+  .trust-section { padding: 64px 0 80px; }
+  .trust-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 18px;
+  }
+  .trust-card {
+    background: var(--surface);
+    border: 1px solid var(--line);
+    border-radius: var(--radius);
+    padding: 22px 20px;
+  }
+  .trust-card svg { color: var(--primary); margin-bottom: 10px; }
+  .trust-card h4 { font-size: 14px; font-weight: 600; margin: 0 0 4px; }
+  .trust-card p { font-size: 13px; color: var(--ink-soft); margin: 0; line-height: 1.5; }
+
+  /* ───── Developer / footer ───── */
+  .dev-section { padding: 56px 0 32px; border-top: 1px solid var(--line); background: var(--surface); }
+  .dev-card {
+    display: grid;
+    grid-template-columns: 1fr auto;
+    gap: 32px;
+    align-items: center;
+    padding: 28px 32px;
+    background: var(--bg);
+    border: 1px solid var(--line);
+    border-radius: var(--radius-lg);
+  }
+  .dev-name { font-size: 18px; font-weight: 600; margin: 0 0 4px; }
+  .dev-meta { font-size: 14px; color: var(--ink-soft); margin: 0; }
+  .dev-meta a { color: var(--primary); }
+  .dev-meta .sep { color: var(--line); margin: 0 10px; }
+  footer { padding: 32px 0 48px; text-align: center; }
+  footer p { font-size: 13px; color: var(--muted); margin: 0; }
+  footer p a { color: var(--ink-soft); }
+
+  /* ───── Responsive ───── */
+  @media (max-width: 980px) {
+    .hero-grid { grid-template-columns: 1fr; gap: 40px; }
+    .screen-row { grid-template-columns: repeat(2, 1fr); }
+    .pillars { grid-template-columns: repeat(2, 1fr); }
+    .why-grid { grid-template-columns: 1fr; gap: 36px; }
+    .steps { grid-template-columns: repeat(2, 1fr); gap: 32px; }
+    .step + .step::before { display: none; }
+    .plans { grid-template-columns: 1fr; }
+    .trust-grid { grid-template-columns: repeat(2, 1fr); }
+    .topbar nav { display: none; }
+  }
+  @media (max-width: 560px) {
+    section { padding: 56px 0; }
+    .hero { padding: 40px 0 24px; }
+    .hero h1 { font-size: 32px; }
+    .screen-row { grid-template-columns: 1fr; }
+    .pillars { grid-template-columns: 1fr; }
+    .steps { grid-template-columns: 1fr; }
+    .trust-grid { grid-template-columns: 1fr; }
+    .dev-card { grid-template-columns: 1fr; }
+    .feature-graphic { max-width: 280px; }
+  }
+</style>
 </head>
 <body>
-    <!-- Navigation -->
+
+<!-- ───── Top bar ───── -->
+<header class="topbar">
+  <div class="container topbar-inner">
+    <a href="#top" class="brand">
+      <img src="https://play-lh.googleusercontent.com/GDLf78lk5EmYgHOtCJSI-QFwb1zBIH2IMKKOJB0KJYeNUUaMKOznvpj0hLO-Abs6PeWwLSEQpnOxVKTFqR8UZw" alt="DeviceLab12 icon" />
+      <span class="brand-mark">DeviceLab12</span>
+    </a>
     <nav>
-        <div class="nav-container">
-            <a href="#" class="logo">🚀 Test Pilot Pro</a>
-            <ul class="nav-links">
-                <li><a href="#features">Features</a></li>
-                <li><a href="#pricing">Pricing</a></li>
-                <li><a href="#how-it-works">How It Works</a></li>
-                <li><a href="#faq">FAQ</a></li>
-                <li><a href="PRIVACY_POLICY.html" target="_blank">Privacy</a></li>
-            </ul>
-            <a href="#download" class="cta-button">Download App</a>
-        </div>
+      <a href="#screens">Screenshots</a>
+      <a href="#features">Features</a>
+      <a href="#how">How it works</a>
+      <a href="#pricing">Pricing</a>
     </nav>
+    <a class="cta-install" href="https://play.google.com/store/apps/details?id=in.factictionary.test_pilot_pro" target="_blank" rel="noopener">
+      <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
+      Install
+    </a>
+  </div>
+</header>
 
-    <!-- Hero Section -->
-    <section class="hero">
-        <div class="hero-container fade-in">
-            <h1>Professional App Testing Made Affordable</h1>
-            <p>Get 12 verified testers for just ₹299. Meet Google Play requirements in 14 days.</p>
-            <div class="hero-buttons">
-                <a href="#download" class="btn btn-primary">Download Now</a>
-                <a href="#pricing" class="btn btn-secondary">View Pricing</a>
-            </div>
+<!-- ───── Hero ───── -->
+<section class="hero" id="top">
+  <div class="container hero-grid">
+    <div>
+      <span class="eyebrow">
+        <svg width="12" height="12" viewBox="0 0 24 24" fill="currentColor"><path d="M3 20.5V3.5c0-.59.34-1.11.84-1.35L13.69 12 3.84 21.85c-.5-.24-.84-.76-.84-1.35m13.81-5.38L6.05 21.34l8.49-8.49 2.27 2.27m3.35-4.31c.34.27.59.69.59 1.19s-.25.92-.59 1.19l-2.27 1.31L15.39 12l2.5-2.5 2.27 1.31M6.05 2.66l10.76 6.22L14.54 11.15 6.05 2.66Z"/></svg>
+        Google Play · Productivity
+      </span>
+      <h1>Close the test, <span class="accent">ship the app.</span></h1>
+      <p class="lede">DeviceLab12 satisfies Google Play's mandatory 14-day closed testing requirement with a real-hardware fleet of 12 Android devices and a reciprocal dev-swap community — so your production access is never held hostage.</p>
+      <div class="meta-row">
+        <span class="meta-pill"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg><strong>4.8</strong> rating</span>
+        <span class="meta-pill"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg><strong>100+</strong> installs</span>
+        <span class="meta-pill mono">v2.0.2</span>
+        <span class="meta-pill">Updated <strong>Oct 15, 2026</strong></span>
+        <span class="meta-pill"><span style="color: #059669;">●</span> In-app purchases</span>
+      </div>
+      <div class="cta-row">
+        <a class="btn btn-primary" href="https://play.google.com/store/apps/details?id=in.factictionary.test_pilot_pro" target="_blank" rel="noopener">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M3 20.5V3.5c0-.59.34-1.11.84-1.35L13.69 12 3.84 21.85c-.5-.24-.84-.76-.84-1.35m13.81-5.38L6.05 21.34l8.49-8.49 2.27 2.27"/></svg>
+          Get on Google Play
+        </a>
+        <a class="btn btn-ghost" href="#how">See how it works</a>
+      </div>
+    </div>
+
+    <!-- Decorative preview card -->
+    <div class="hero-card" aria-hidden="true">
+      <span class="hero-card-label">
+        <span style="width:6px;height:6px;background:#34d399;border-radius:50%;display:inline-block;"></span>
+        Live device fleet
+      </span>
+      <h2>12 real Android devices, on call.</h2>
+      <p>Real physical Android hardware spanning current OS versions — daily check-ins, no bot farms.</p>
+      <div class="feature-mock fleet-summary">
+        <div class="fleet-stat">
+          <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="#7dd3fc" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="6" y="2" width="12" height="20" rx="2" ry="2"/><line x1="12" y1="18" x2="12.01" y2="18"/></svg>
+          <div class="fleet-num">12</div>
+          <div class="fleet-lbl">Dedicated devices</div>
         </div>
-    </section>
-
-    <!-- Features Section -->
-    <section id="features">
-        <div class="container">
-            <h2>Why Choose Test Pilot Pro?</h2>
-            <div class="features-grid">
-                <div class="feature-card fade-in">
-                    <div class="feature-icon">⚡</div>
-                    <h3>Lightning Fast</h3>
-                    <p>Get testers assigned within 24 hours. Start testing immediately and launch faster.</p>
-                </div>
-                <div class="feature-card fade-in">
-                    <div class="feature-icon">💰</div>
-                    <h3>Affordable</h3>
-                    <p>Just ₹299 for 12 testers. 75% cheaper than competitors. No hidden fees.</p>
-                </div>
-                <div class="feature-card fade-in">
-                    <div class="feature-icon">✅</div>
-                    <h3>Verified Testers</h3>
-                    <p>Real people, real testing. Automated verification of installation and usage.</p>
-                </div>
-                <div class="feature-card fade-in">
-                    <div class="feature-icon">📊</div>
-                    <h3>Real-time Dashboard</h3>
-                    <p>Track testing progress, tester assignments, and feedback in real-time.</p>
-                </div>
-                <div class="feature-card fade-in">
-                    <div class="feature-icon">📸</div>
-                    <h3>Detailed Feedback</h3>
-                    <p>Get comprehensive feedback with screenshots and testing reports.</p>
-                </div>
-                <div class="feature-card fade-in">
-                    <div class="feature-icon">🔒</div>
-                    <h3>Secure & Private</h3>
-                    <p>Tester identities are anonymous. Your app data is encrypted and secure.</p>
-                </div>
-            </div>
+        <div class="fleet-stat">
+          <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="#7dd3fc" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>
+          <div class="fleet-num">100%</div>
+          <div class="fleet-lbl">Real hardware</div>
         </div>
-    </section>
-
-    <!-- Pricing Section -->
-    <section id="pricing" class="pricing-section">
-        <div class="container">
-            <h2>Simple, Transparent Pricing</h2>
-            <div class="pricing-grid">
-                <div class="pricing-card fade-in">
-                    <h3>Free Trial</h3>
-                    <div class="price">Free</div>
-                    <p class="price-period">Try before you buy</p>
-                    <ul class="features-list">
-                        <li>3 verified testers</li>
-                        <li>7 days testing</li>
-                        <li>Basic feedback</li>
-                        <li>Installation verification</li>
-                        <li>Limited to 1 app</li>
-                    </ul>
-                    <button class="btn btn-secondary" style="width: 100%;">Get Started</button>
-                </div>
-                <div class="pricing-card popular fade-in">
-                    <h3>Premium ⭐</h3>
-                    <div class="price">₹299</div>
-                    <p class="price-period">per app, one-time payment</p>
-                    <ul class="features-list">
-                        <li>12 verified testers</li>
-                        <li>14 days testing</li>
-                        <li>Detailed feedback</li>
-                        <li>Screenshots included</li>
-                        <li>Real-time dashboard</li>
-                        <li>Email support</li>
-                        <li>Meets Google Play requirements</li>
-                    </ul>
-                    <button class="btn btn-primary" style="width: 100%;">Choose Plan</button>
-                </div>
-            </div>
-            <p style="text-align: center; color: var(--text-light); margin-top: 30px;">
-                💡 <strong>Tip:</strong> Premium plan includes everything you need to meet Google Play's closed testing requirements.
-            </p>
+        <div class="fleet-stat">
+          <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="#7dd3fc" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+          <div class="fleet-num">14</div>
+          <div class="fleet-lbl">Days coverage</div>
         </div>
-    </section>
+      </div>
+      <p class="fleet-note">All hardware is real Android. Specific devices and OS versions vary by fleet availability.</p>
+    </div>
+  </div>
+</section>
 
-    <!-- How It Works -->
-    <section id="how-it-works">
-        <div class="container">
-            <h2>How It Works</h2>
-            <div class="steps">
-                <div class="step fade-in">
-                    <div class="step-number">1</div>
-                    <h3>Submit Your App</h3>
-                    <p>Enter your app details, package name, and description. Takes just 2 minutes.</p>
-                </div>
-                <div class="step fade-in">
-                    <div class="step-number">2</div>
-                    <h3>Choose a Plan</h3>
-                    <p>Select Free Trial or Premium. Pay securely via UPI or manual verification.</p>
-                </div>
-                <div class="step fade-in">
-                    <div class="step-number">3</div>
-                    <h3>Get Testers</h3>
-                    <p>Testers are assigned within 24 hours. Start testing immediately.</p>
-                </div>
-                <div class="step fade-in">
-                    <div class="step-number">4</div>
-                    <h3>Receive Feedback</h3>
-                    <p>Get detailed feedback with screenshots and testing reports in real-time.</p>
-                </div>
-                <div class="step fade-in">
-                    <div class="step-number">5</div>
-                    <h3>Launch Your App</h3>
-                    <p>Use the feedback to improve your app and launch on Google Play with confidence.</p>
-                </div>
-            </div>
+<!-- ───── Screenshots ───── -->
+<section id="screens" class="screens-section">
+  <div class="container">
+    <div class="section-head">
+      <span class="eyebrow">App preview</span>
+      <h2>Real screens from the Play Store listing</h2>
+      <p>Submit your app, swap credits with peers, monitor a live 14-day timeline, and export audit-ready logs — all from a single dashboard.</p>
+    </div>
+    <div class="screen-row">
+      <div class="screen-card">
+        <div class="screen-frame">
+          <img src="https://play-lh.googleusercontent.com/WjFk5JA2UoPyes4z7zFcwQQsXnfH8kQ_yiZExpWHls4e3ZwmmBZikCiLLfmwSpp0lOBHMDG7gDReMCBdlI-hBw" alt="DeviceLab12 screenshot 1" loading="lazy" />
         </div>
-    </section>
-
-    <!-- Stats Section -->
-    <section class="stats">
-        <div class="container">
-            <div class="stats-grid">
-                <div class="fade-in">
-                    <div class="stat">1000+</div>
-                    <div class="stat-label">Apps Tested</div>
-                </div>
-                <div class="fade-in">
-                    <div class="stat">5000+</div>
-                    <div class="stat-label">Active Testers</div>
-                </div>
-                <div class="fade-in">
-                    <div class="stat">24 hrs</div>
-                    <div class="stat-label">Avg Assignment Time</div>
-                </div>
-                <div class="fade-in">
-                    <div class="stat">4.8★</div>
-                    <div class="stat-label">User Rating</div>
-                </div>
-            </div>
+        <div class="screen-meta">
+          <span class="num">01 / ONBOARD</span>
+          <h4>Submit in 90 seconds</h4>
         </div>
-    </section>
-
-    <!-- Testimonials -->
-    <section>
-        <div class="container">
-            <h2>What Users Say</h2>
-            <div class="testimonials-grid">
-                <div class="testimonial fade-in">
-                    <div class="testimonial-text">
-                        "Test Pilot Pro helped me launch my app in just 2 weeks. The testers were professional and the feedback was invaluable!"
-                    </div>
-                    <div class="testimonial-author">Rahul Kumar</div>
-                    <div class="testimonial-role">App Developer</div>
-                </div>
-                <div class="testimonial fade-in">
-                    <div class="testimonial-text">
-                        "Finally, an affordable way to meet Google Play requirements. Highly recommended for indie developers!"
-                    </div>
-                    <div class="testimonial-author">Priya Sharma</div>
-                    <div class="testimonial-role">Startup Founder</div>
-                </div>
-                <div class="testimonial fade-in">
-                    <div class="testimonial-text">
-                        "The real-time dashboard is amazing. I could track testing progress and get feedback instantly. Worth every rupee!"
-                    </div>
-                    <div class="testimonial-author">Amit Patel</div>
-                    <div class="testimonial-role">Mobile Developer</div>
-                </div>
-            </div>
+      </div>
+      <div class="screen-card">
+        <div class="screen-frame">
+          <img src="https://play-lh.googleusercontent.com/aDqZiNTOsfEZtyaxjdWOJHwRYDmbjEtESTEQkjxJu6AeNXqjR_G8Kqr0uJ7J6dnBkuxzao704-MlSF-PizQ6IA" alt="DeviceLab12 screenshot 2" loading="lazy" />
         </div>
-    </section>
-
-    <!-- FAQ Section -->
-    <section>
-        <div class="container">
-            <h2>Frequently Asked Questions</h2>
-            <div class="faq-item">
-                <div class="faq-question" onclick="this.parentElement.classList.toggle('active')">
-                    <span>What is Test Pilot Pro?</span>
-                    <span>+</span>
-                </div>
-                <div class="faq-answer">
-                    Test Pilot Pro is a platform that connects Android developers with verified testers to fulfill Google Play's closed testing requirements. We provide 12 testers for 14 days at just ₹299.
-                </div>
-            </div>
-
-            <div class="faq-item">
-                <div class="faq-question" onclick="this.parentElement.classList.toggle('active')">
-                    <span>How long does testing take?</span>
-                    <span>+</span>
-                </div>
-                <div class="faq-answer">
-                    Testers are typically assigned within 24 hours. The testing period is 14 days for the Premium plan and 7 days for the Free Trial.
-                </div>
-            </div>
-
-            <div class="faq-item">
-                <div class="faq-question" onclick="this.parentElement.classList.toggle('active')">
-                    <span>Is my app data secure?</span>
-                    <span>+</span>
-                </div>
-                <div class="faq-answer">
-                    Yes! We use enterprise-grade encryption, secure servers, and follow GDPR compliance. Your app data is never shared with third parties.
-                </div>
-            </div>
-
-            <div class="faq-item">
-                <div class="faq-question" onclick="this.parentElement.classList.toggle('active')">
-                    <span>Can I get a refund?</span>
-                    <span>+</span>
-                </div>
-                <div class="faq-answer">
-                    All payments are non-refundable once testing has commenced. However, if you have issues, contact our support team within 7 days of payment.
-                </div>
-            </div>
-
-            <div class="faq-item">
-                <div class="faq-question" onclick="this.parentElement.classList.toggle('active')">
-                    <span>What payment methods do you accept?</span>
-                    <span>+</span>
-                </div>
-                <div class="faq-answer">
-                    We accept UPI payments and manual payment verification via screenshot. Both methods are secure and processed quickly.
-                </div>
-            </div>
-
-            <div class="faq-item">
-                <div class="faq-question" onclick="this.parentElement.classList.toggle('active')">
-                    <span>Can I see tester identities?</span>
-                    <span>+</span>
-                </div>
-                <div class="faq-answer">
-                    No, tester identities are anonymous for privacy. Testers are identified as Tester1, Tester2, etc. You'll see their feedback and ratings.
-                </div>
-            </div>
+        <div class="screen-meta">
+          <span class="num">02 / COMMUNITY</span>
+          <h4>Reciprocal dev-swap</h4>
         </div>
-    </section>
-
-    <!-- CTA Section -->
-    <section class="cta-section" id="download">
-        <div class="container">
-            <h2>Ready to Launch Your App?</h2>
-            <p>Join 1000+ developers who trust Test Pilot Pro</p>
-            <div class="hero-buttons">
-                <a href="https://play.google.com/store/apps/details?id=in.factictionary.test_pilot_pro" class="btn btn-primary" target="_blank">
-                    📱 Download on Google Play
-                </a>
-                <a href="mailto:support@testpilotpro.in" class="btn btn-secondary">
-                    📧 Contact Support
-                </a>
-            </div>
+      </div>
+      <div class="screen-card">
+        <div class="screen-frame">
+          <img src="https://play-lh.googleusercontent.com/FqbawyVVDc7xpp_eJWjq87WvR1G7s7t_KMAFqKNbek7aJ-OKPZ30OPeRjJaXlgVY4YRR2HM_v42PZoTLLtHysQ" alt="DeviceLab12 screenshot 3" loading="lazy" />
         </div>
-    </section>
-
-    <!-- Footer -->
-    <footer>
-        <div class="footer-content">
-            <div class="footer-section">
-                <h4>Test Pilot Pro</h4>
-                <p>Professional app testing services for Android developers. Affordable, fast, and reliable.</p>
-            </div>
-            <div class="footer-section">
-                <h4>Quick Links</h4>
-                <ul>
-                    <li><a href="#features">Features</a></li>
-                    <li><a href="#pricing">Pricing</a></li>
-                    <li><a href="#how-it-works">How It Works</a></li>
-                    <li><a href="#faq">FAQ</a></li>
-                </ul>
-            </div>
-            <div class="footer-section">
-                <h4>Legal</h4>
-                <ul>
-                    <li><a href="PRIVACY_POLICY.html" target="_blank">Privacy Policy</a></li>
-                    <li><a href="TERMS_OF_SERVICE.html" target="_blank">Terms of Service</a></li>
-                    <li><a href="mailto:support@testpilotpro.in">Contact Us</a></li>
-                </ul>
-            </div>
-            <div class="footer-section">
-                <h4>Contact</h4>
-                <ul>
-                    <li>📧 <a href="mailto:support@testpilotpro.in">support@testpilotpro.in</a></li>
-                    <li>🌐 <a href="https://www.testpilotpro.in" target="_blank">www.testpilotpro.in</a></li>
-                    <li>📱 Available on Google Play</li>
-                </ul>
-            </div>
+        <div class="screen-meta">
+          <span class="num">03 / TIMELINE</span>
+          <h4>Day-by-day progress</h4>
         </div>
-        <div class="footer-bottom">
-            <p>&copy; 2026 Test Pilot Pro. All rights reserved.</p>
-            <p>Made with ❤️ for Android developers</p>
+      </div>
+      <div class="screen-card">
+        <div class="screen-frame">
+          <img src="https://play-lh.googleusercontent.com/qXGsYJANcoBV2bg9Nf5k1BcyDA4Sa9nw6cig-LkV-yZ51WHrt1NnD5tXnEHWRCpH0BeY3-gXjUt2ShiWT55LXg" alt="DeviceLab12 screenshot 4" loading="lazy" />
         </div>
-    </footer>
+        <div class="screen-meta">
+          <span class="num">04 / EXPORT</span>
+          <h4>Audit-ready reports</h4>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
 
-    <script>
-        // Smooth scrolling for anchor links
-        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-            anchor.addEventListener('click', function (e) {
-                e.preventDefault();
-                const target = document.querySelector(this.getAttribute('href'));
-                if (target) {
-                    target.scrollIntoView({
-                        behavior: 'smooth',
-                        block: 'start'
-                    });
-                }
-            });
-        });
+<!-- ───── Feature pillars ───── -->
+<section id="features">
+  <div class="container">
+    <div class="section-head">
+      <span class="eyebrow">Core features</span>
+      <h2>Five pillars that replace the testing grind</h2>
+      <p>Built for solo indie developers, hobbyist studios, and small agencies that don't have time to chase 20 friends on WhatsApp for two weeks.</p>
+    </div>
+    <div class="pillars">
+      <div class="pillar">
+        <div class="pillar-icon">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="5" y="2" width="14" height="20" rx="2" ry="2"/><line x1="12" y1="18" x2="12.01" y2="18"/></svg>
+        </div>
+        <h3>12 physical devices</h3>
+        <p>Real Android hardware across multiple vendors — never emulators, never bots.</p>
+      </div>
+      <div class="pillar">
+        <div class="pillar-icon">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>
+        </div>
+        <h3>Dev-swap credits</h3>
+        <p>Test other indie apps to earn credits. Redeem credits to have peers test yours.</p>
+      </div>
+      <div class="pillar">
+        <div class="pillar-icon">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>
+        </div>
+        <h3>Google Group handoff</h3>
+        <p>One-click add of <span class="mono">testpilotpro-testers@googlegroups.com</span> to your closed track.</p>
+      </div>
+      <div class="pillar">
+        <div class="pillar-icon">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="18" y1="20" x2="18" y2="10"/><line x1="12" y1="20" x2="12" y2="4"/><line x1="6" y1="20" x2="6" y2="14"/></svg>
+        </div>
+        <h3>Audit-ready logs</h3>
+        <p>Day-by-day reports on installs, sessions, UI feedback, performance, and crashes.</p>
+      </div>
+      <div class="pillar">
+        <div class="pillar-icon">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M13 2L3 14h9l-1 8 10-12h-9l1-8z"/></svg>
+        </div>
+        <h3>Flexible tiers</h3>
+        <p>Free community plan with 3–5 devices, or VIP Lab Fleet for all 12 dedicated slots.</p>
+      </div>
+    </div>
+  </div>
+</section>
 
-        // Add fade-in animation on scroll
-        const observerOptions = {
-            threshold: 0.1,
-            rootMargin: '0px 0px -100px 0px'
-        };
+<!-- ───── Why ───── -->
+<section class="why-section">
+  <div class="container why-grid">
+    <div>
+      <span class="eyebrow">Why DeviceLab12</span>
+      <h2>Google's rule is unforgiving. We make it cheap.</h2>
+      <p>Personal developer accounts need opted-in testers who keep your app installed and engaged for <strong>14 continuous days</strong> before you can apply for Production. If even one tester drops out, the clock resets.</p>
+      <ul class="checklist">
+        <li><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg><span><strong>No bot farms.</strong> Every device shows authentic hardware identifiers and daily session logs.</span></li>
+        <li><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg><span><strong>No "Item not found" 404s.</strong> Pre-configured Google Group eliminates tester opt-in friction.</span></li>
+        <li><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg><span><strong>No manual chasing.</strong> Reciprocal dev-swap keeps testers motivated by their own roadmap.</span></li>
+        <li><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg><span><strong>No surprises at review.</strong> Export comprehensive logs to answer every production-application question.</span></li>
+      </ul>
+      <div class="phone-mock" aria-hidden="true">
+        <div class="phone-screen"></div>
+      </div>
+    </div>
+    <div class="feature-graphic" aria-hidden="true">
+      <img src="https://play-lh.googleusercontent.com/e8PqJr0Oyjfz3k0Anv8H6DFG2AF1Zhj_Rxx9UpWUqanb8IE4ZGuaBvjqF0LTJDvyXVrbV4851G-1pfCuZXu4pQ" alt="DeviceLab12 feature graphic" />
+    </div>
+  </div>
+</section>
 
-        const observer = new IntersectionObserver(function(entries) {
-            entries.forEach(entry => {
-                if (entry.isIntersecting) {
-                    entry.target.classList.add('fade-in');
-                    observer.unobserve(entry.target);
-                }
-            });
-        }, observerOptions);
+<!-- ───── How it works ───── -->
+<section id="how">
+  <div class="container">
+    <div class="section-head">
+      <span class="eyebrow">How it works</span>
+      <h2>Four steps from Play Console to Production-ready</h2>
+    </div>
+    <ol class="steps">
+      <li class="step">
+        <div class="step-num">1</div>
+        <h3>Set up your closed track</h3>
+        <p>In Google Play Console, add <span class="mono">testpilotpro-testers@googlegroups.com</span> under Manage Testers.</p>
+      </li>
+      <li class="step">
+        <div class="step-num">2</div>
+        <h3>Submit your app</h3>
+        <p>Enter your app name, package name, and Play Store testing-track link inside DeviceLab12.</p>
+      </li>
+      <li class="step">
+        <div class="step-num">3</div>
+        <h3>Choose a plan</h3>
+        <p>Allocate your earned Dev Credits or activate the VIP Lab Fleet for all 12 dedicated devices.</p>
+      </li>
+      <li class="step">
+        <div class="step-num">4</div>
+        <h3>Monitor &amp; ship</h3>
+        <p>Watch daily device check-ins, read tester feedback, and hit your 14-day milestone ready for Production.</p>
+      </li>
+    </ol>
+  </div>
+</section>
 
-        document.querySelectorAll('.feature-card, .step, .testimonial, .pricing-card').forEach(el => {
-            observer.observe(el);
-        });
-    </script>
+<!-- ───── Pricing ───── -->
+<section id="pricing" class="pricing-section">
+  <div class="container">
+    <div class="section-head">
+      <span class="eyebrow">Pricing</span>
+      <h2>Free community credits, or pay for the fleet</h2>
+      <p>Both plans cover the 14-day Google Play requirement. Pick the one that matches your timeline.</p>
+    </div>
+    <div class="plans">
+      <div class="plan">
+        <h3>Community Plan</h3>
+        <p style="font-size:14px;color:var(--ink-soft);margin:0 0 8px;">Free — earn credits by testing other apps</p>
+        <div class="price">$0<small> / app</small></div>
+        <p class="price-period">Best for hobbyist apps &amp; low-priority releases</p>
+        <ul>
+          <li><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>3–5 community lab devices</li>
+          <li><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>Earn Dev Credits by testing other indie apps</li>
+          <li><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>Watch short developer sponsor ads to top up</li>
+          <li><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>Google Group opt-in included</li>
+        </ul>
+        <a class="btn btn-ghost" href="https://play.google.com/store/apps/details?id=in.factictionary.test_pilot_pro" target="_blank" rel="noopener">Start free</a>
+      </div>
+      <div class="plan featured">
+        <span class="plan-tag">Recommended</span>
+        <h3>VIP Lab Fleet</h3>
+        <p style="font-size:14px;color:#cbd5e1;margin:0 0 8px;">All 12 dedicated devices, automated logs</p>
+        <div class="price">$5.99<small> / item</small></div>
+        <p class="price-period">One-time per app, billed via Google Play</p>
+        <ul>
+          <li><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>All 12 dedicated physical devices</li>
+          <li><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>14 consecutive days of automated daily logs</li>
+          <li><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>Exportable audit logs for Production review</li>
+          <li><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>Zero manual coordination</li>
+          <li><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>Priority allocation within 24–48 hours</li>
+        </ul>
+        <a class="btn btn-primary" href="https://play.google.com/store/apps/details?id=in.factictionary.test_pilot_pro" target="_blank" rel="noopener">Activate fleet</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ───── Trust / data safety ───── -->
+<section class="trust-section">
+  <div class="container">
+    <div class="section-head">
+      <span class="eyebrow">Data safety</span>
+      <h2>Declared on the Play Store listing</h2>
+      <p>Verified by Google Play's data-safety review. Reviewed Oct 15, 2026.</p>
+    </div>
+    <div class="trust-grid">
+      <div class="trust-card">
+        <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><line x1="12" y1="8" x2="12" y2="12"/><line x1="12" y1="16" x2="12.01" y2="16"/></svg>
+        <h4>No third-party sharing</h4>
+        <p>No app data is shared with any third party.</p>
+      </div>
+      <div class="trust-card">
+        <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="11" width="18" height="11" rx="2" ry="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></svg>
+        <h4>Encrypted in transit</h4>
+        <p>All data transfer is TLS-encrypted between your app, the fleet, and our servers.</p>
+      </div>
+      <div class="trust-card">
+        <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 6l3 12h12l3-12"/><path d="M3 6l3-3h12l3 3"/><line x1="9" y1="10" x2="9" y2="14"/><line x1="15" y1="10" x2="15" y2="14"/></svg>
+        <h4>Deletion on request</h4>
+        <p>You can request deletion of your submitted app data and tester history anytime.</p>
+      </div>
+      <div class="trust-card">
+        <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>
+        <h4>Rated for everyone</h4>
+        <p>Content is generally suitable for all ages. Contains ads and in-app purchases.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ───── Developer / footer ───── -->
+<section class="dev-section">
+  <div class="container">
+    <div class="dev-card">
+      <div>
+        <h3 class="dev-name">Factictionary</h3>
+        <p class="dev-meta">Bengaluru, India <span class="sep">·</span> 10+ published Android apps <span class="sep">·</span> <a href="https://factictionary.in" target="_blank" rel="noopener">factictionary.in</a></p>
+        <p class="dev-meta" style="margin-top:6px;"><a href="mailto:factictionary@gmail.com">factictionary@gmail.com</a> <span class="sep">·</span> <a href="https://testpilot.factictionary.in/privacy_policy.html" target="_blank" rel="noopener">Privacy policy</a></p>
+      </div>
+      <a class="btn btn-primary" href="https://play.google.com/store/apps/details?id=in.factictionary.test_pilot_pro" target="_blank" rel="noopener">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M3 20.5V3.5c0-.59.34-1.11.84-1.35L13.69 12 3.84 21.85c-.5-.24-.84-.76-.84-1.35m13.81-5.38L6.05 21.34l8.49-8.49 2.27 2.27"/></svg>
+        Get on Google Play
+      </a>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="container">
+    <p>© 2026 DeviceLab12 by Factictionary. <a href="https://play.google.com/store/apps/details?id=in.factictionary.test_pilot_pro" target="_blank" rel="noopener">View on Google Play →</a></p>
+  </div>
+</footer>
+
 </body>
 </html>
